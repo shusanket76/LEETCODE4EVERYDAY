@@ -1,3 +1,4 @@
-res = [6,3,4,5,3,1]
-b = res[::-1]
-print(b)
+a = [1,2,3,4]
+print(a)
+a.pop()
+print(a)
