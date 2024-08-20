@@ -16,4 +16,4 @@ class Solution:
         return len(res)==0
                 
 
-        
+        self.start
