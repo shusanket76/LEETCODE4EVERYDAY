@@ -1,4 +1,5 @@
-def subsets(nums):
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
         def dfs(pointer, curr):
             if pointer>=len(nums):
@@ -10,4 +11,4 @@ def subsets(nums):
             dfs(pointer+1, curr)
         dfs( 0, [])
         return res
-a = subsets([1,2,3])
+        
