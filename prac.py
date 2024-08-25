@@ -1,20 +1,11 @@
-arr = [2, 3, 3, 3, 6, 9, 9]
-def moveElements(arr):
+def findMissingNumber(nums):
+    res = [x for x in range(len(nums)+1)]
+    print(res)
+    missing = 0
+    for x in res:
+      missing^=x
+    for y in nums:
+      missing^=y
     # TODO: Write your code here
-    l = 0 
-    r = 0
-    while r<len(arr):
-      if (r-1)>=0:
-        if arr[r-1]==arr[r]:
-          r+=1
-        else:
-          if l+1!=r:
-            arr[l+1], arr[r] = arr[r], arr[l+1]
-          l+=1
-          r+=1
-      else:
-        r+=1
-    print(arr)
-    print(l)
-    print(r)
-a  = moveElements(arr)
+    return missing
+a = findMissingNumber([4, 0, 3, 1])
