@@ -1,11 +1,19 @@
-def findMissingNumber(nums):
-    res = [x for x in range(len(nums)+1)]
-    print(res)
-    missing = 0
-    for x in res:
-      missing^=x
-    for y in nums:
-      missing^=y
-    # TODO: Write your code here
-    return missing
-a = findMissingNumber([4, 0, 3, 1])
+def reverseWords(s: str) -> str:
+        slist = s.split(" ")
+        stack = []
+        for x in slist:
+            if x!=" ":
+                stack.append(x)
+        newword = ""
+        count = 0
+        while stack:
+            y = stack.pop()
+            
+            if len(newword)==0:
+                newword+=y
+            else:
+                newword+=" "+y
+ 
+        return (newword)
+a = reverseWords("  hello world  ")
+print("=>"+a+"<=")
