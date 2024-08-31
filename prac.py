@@ -1,8 +1,3 @@
-a = set()
-a.add(1)
-a.add(21)
-a.add(13)
-a.add(14)
-a.add(15)
-a.remove(15)
+a = {}
+a["ga"] = a.get("g", 0)+1
 print(a)
