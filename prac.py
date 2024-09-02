@@ -1,3 +1,3 @@
-a = {}
-a["ga"] = a.get("g", 0)+1
+a = True
+a = not a
 print(a)
