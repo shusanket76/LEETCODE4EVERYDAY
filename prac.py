@@ -1,3 +1,1 @@
-a = True
-a = not a
-print(a)
+print("a"<"b")
