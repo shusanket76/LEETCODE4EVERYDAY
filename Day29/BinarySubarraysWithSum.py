@@ -1,4 +1,5 @@
-def numSubarraysWithSum(nums, goal: int) -> int:
+class Solution:
+    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
         hasmap = {}
         temp = 0
         res=[0]
@@ -10,6 +11,10 @@ def numSubarraysWithSum(nums, goal: int) -> int:
                 weneed = temp-goal
                 if weneed in hasmap:
                     res[0]+=hasmap[weneed]
+                if temp in hasmap:
+                    hasmap[temp]+=1
+                else:
+                    hasmap[temp]=1
             elif temp<goal:
                 if temp in hasmap:
                     hasmap[temp]+=1
@@ -23,6 +28,5 @@ def numSubarraysWithSum(nums, goal: int) -> int:
                     hasmap[temp]+=1
                 else:
                     hasmap[temp]=1
+        print(hasmap)
         return (res[0])
-
-a = numSubarraysWithSum([1,0,1,0,1],2)
