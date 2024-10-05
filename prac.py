@@ -1,2 +1,2 @@
-for x in range(3,1,-1):
-    print(x)
+print(3%10)
+print(13%10)
